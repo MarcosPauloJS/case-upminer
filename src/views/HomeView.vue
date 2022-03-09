@@ -1,4 +1,8 @@
+<script setup>
+  import BannerSpotlight from "@/components/BannerSpotlight.vue";
+</script>
+
 <template>
-  <Banner />
+  <BannerSpotlight />
   <h1>upMiner</h1>
 </template>
