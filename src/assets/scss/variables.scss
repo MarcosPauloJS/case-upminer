@@ -1,14 +1,29 @@
-// main color 
-$color-primary: #f16f13;
-$color-secondary: #696969;
+// main color
+$colors: (
+	primary: #f16f13,
+	secondary: #696969,
+);
 
-//text color
-$text-color-primary: #231f1f;
-$text-color-secondary: #696969;
-$text-color-light: #FFF;
+//text
+$text-colors: (
+	primary: #231f1f,
+	secondary: #696969,
+	light: #FFF,
+);
+
+$text-sizes: (
+	smallest: 10px,
+	samll: 14px,
+	medium: 16px,
+	big: 22px,
+	bigger: 32px,
+	biggest: 40px,
+);
 
 // background colors
 $background-color: #FFF;
 
 // gradients
-$gradient-primary: linear-gradient(90deg, rgba(255,142,73,1) 0%, rgba(241,111,19,1) 100%)
+$gradients: (
+	primary: linear-gradient(90deg, rgba(255,142,73,1) 0%, rgba(241,111,19,1) 100%)
+)

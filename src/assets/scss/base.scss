@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "@/assets/scss/variables.scss";
+
 //reset css
 *,
 *::before,
@@ -9,15 +10,16 @@
   padding: 0;
   position: relative;
   font-weight: normal;
+  font-family: Roboto, sans-serif;
 }
 
 body {
   min-height: 100vh;
-  color: $text-color-primary;
+  color: map.get($text-colors, "primary");;
   background: $background-color;
   line-height: 1.6;
   font-family: Roboto, sans-serif;
-  font-size: 15px;
+  font-size: map.get($text-sizes, "medium");
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
