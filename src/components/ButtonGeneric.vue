@@ -1,7 +1,7 @@
 <script setup>
+  const emit = defineEmits(['onClickButton'])
   const props = defineProps({
-    text: String,
-    action: Function,
+    text: String, 
     color: String,
     borderRadius: String,
     padding: String,
@@ -9,20 +9,21 @@
     width: String,
   });
 
-  const actionDefault = () => {alert('hello world')};
-
   const text = props.text || 'Button';
-  const action = props.action || actionDefault;
   const color = props.color || '#FFF';
   const borderRadius = props.borderRadius || '3px';
   const padding = props.padding || '4px 15px';
   const fontSize = props.fontSize || '16px';
   const width = props.width || 'auto';
+
+  const onClick = () => {
+    emit('onClickButton');
+  }
   
 </script>
 
 <template>
-  <button class="button"  @click="action">
+  <button class="button" @click="onClick" >
     {{text}}
   </button>
 </template>
