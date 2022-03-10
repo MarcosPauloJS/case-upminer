@@ -1,40 +1,43 @@
 <script setup>
   import ButtonGeneric from "@/components/ButtonGeneric.vue"
+import { reactive, computed, toRefs } from "vue";
   const emit = defineEmits(['onClickButtonBanner'])
   const props = defineProps({
-      text: String, 
-      color: String,
-      borderRadius: String,
-      padding: String,
-      fontSize: String,
+      title: String, 
+      resume: String, 
+      price: Number, 
       backgroundUrl: String,
       buttonText: String,
     });
 
   const buttonText = props.buttonText || ''
   const backgroundUrl = props.backgroundUrl ? `url('${props.backgroundUrl}')`: ''
-  console.log(backgroundUrl);
+  const title = props.title || ''
+  const resume = props.resume || ''
 
   const handleClickButton = function() {
-      emit('onClickButtonBanner')
-    }
+    emit('onClickButtonBanner')
+  }
+
+  const valueFormated = computed( () => {
+    const originalPrice = props.price ? props.price : 0
+    return  originalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+  });
 </script>
 
 <template>
   <div class="banner-spotlight">
     <span class="brand" >
       <img class="brand__img" src="@/assets/img/logo_upminer.png" />
-      <h1 class="brand__title">Histórico Empresarial</h1>
+      <h1 class="brand__title">{{title}}</h1>
     </span>
     <p class="banner-spotlight__resume">
-      O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos 
-      os fatos e acontecimentos relevantes de uma empresa desde o seu ano 
-      de fundação.
+      {{resume}}
     </p>
 
     <div class="banner-spotlight__footer">
       <span class="banner-spotlight__footer__value">
-        R$: 0,00
+        {{valueFormated}}
       </span>
       <ButtonGeneric :text="buttonText" @onClickButton="handleClickButton"/>
     </div>
@@ -70,7 +73,6 @@
 
     >.brand {
       display: flex;
-      justify-content: space-between;
       align-items: end;
       max-width: 480px;
       line-height: 36px;
@@ -84,8 +86,10 @@
         font-size: map.get($text-sizes, "bigger");
         padding-left: 20px;
         border-left: 1px solid #696969;
+        margin-left: 20px;
 
         @include small {  
+          margin-left: 0px;
           margin-top: 10px;
           padding-left: 0px;
           border: none;
@@ -103,6 +107,7 @@
       font-size: map.get($text-sizes, "samll");
       width: 80vw;
       max-width: 700px;
+      text-align: start;
 
       @include small {
         margin-top: 10px;
