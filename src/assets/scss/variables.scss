@@ -26,4 +26,16 @@ $background-color: #FFF;
 // gradients
 $gradients: (
 	primary: linear-gradient(90deg, rgba(255,142,73,1) 0%, rgba(241,111,19,1) 100%)
-)
+);
+
+@mixin small {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (min-width: 480px) and (max-width: 1200px) {
+		@content;
+	}
+}

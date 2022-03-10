@@ -15,6 +15,7 @@
   const padding = props.padding || '4px 15px';
   const fontSize = props.fontSize || '16px';
   const width = props.width || 'auto';
+  
 
   const onClick = () => {
     emit('onClickButton');
