@@ -1,40 +1,16 @@
 <script setup>
-  import briefcase from '@/assets/icons/briefcase.svg'
-  import university from '@/assets/icons/university.svg'
-  import gavel from '@/assets/icons/gavel.svg'
-  import gem from '@/assets/icons/gem.svg'
-  import globe from '@/assets/icons/globe.svg'
-  import globe2 from '@/assets/icons/globe-v2.svg'
-  import ban from '@/assets/icons/ban.svg'
-  import male from '@/assets/icons/male.svg'
-  import tree from '@/assets/icons/tree.svg'
-  import piggy from '@/assets/icons/piggy.svg'
-
-  const icons = {
-    briefcase,
-    gavel,
-    university,
-    gem,
-    globe,
-    globe2,
-    ban,
-    male,
-    tree,
-    piggy,
-  }
-
   const props = defineProps({
     title: String,
-    iconName: String,
+    iconUrl: String,
   })
   
   const title = props.title;
-  const iconName = props.iconName;
+  const iconUrl = props.iconUrl;
 </script>
 
 <template>
   <div class="select-card">
-    <img class="select-card__img" :src="icons[iconName]" />
+    <img class="select-card__img" :src="iconUrl" />
     <h3 class="select-card__title">
       {{title}}
     </h3>
@@ -81,7 +57,8 @@
     }
 
     >.select-card__img {
-      transform: scale(1.2);
+      width: 32px ;
+      height: 32px ;
     }
   }
 
