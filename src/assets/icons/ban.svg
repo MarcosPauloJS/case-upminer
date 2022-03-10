@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
+	<title>Fontes</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m-152-901h1366v1590h-1366z" />
+		</clipPath>
+		<image width="496" height="496" id="img1" href="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJiYW4iIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1iYW4gZmEtdy0xNiIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yNTYgOEMxMTkuMDM0IDggOCAxMTkuMDMzIDggMjU2czExMS4wMzQgMjQ4IDI0OCAyNDggMjQ4LTExMS4wMzQgMjQ4LTI0OFMzOTIuOTY3IDggMjU2IDh6bTEzMC4xMDggMTE3Ljg5MmM2NS40NDggNjUuNDQ4IDcwIDE2NS40ODEgMjAuNjc3IDIzNS42MzdMMTUwLjQ3IDEwNS4yMTZjNzAuMjA0LTQ5LjM1NiAxNzAuMjI2LTQ0LjczNSAyMzUuNjM4IDIwLjY3NnpNMTI1Ljg5MiAzODYuMTA4Yy02NS40NDgtNjUuNDQ4LTcwLTE2NS40ODEtMjAuNjc3LTIzNS42MzdMMzYxLjUzIDQwNi43ODRjLTcwLjIwMyA0OS4zNTYtMTcwLjIyNiA0NC43MzYtMjM1LjYzOC0yMC42NzZ6Ij48L3BhdGg+PC9zdmc+"/>
+	</defs>
+	<style>
+	</style>
+	<g id="Fontes" clip-path="url(#cp1)">
+		<use id="ban-solid" href="#img1" transform="matrix(.068,0,0,.068,0,0)"/>
+	</g>
+</svg>

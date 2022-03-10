@@ -1,6 +1,6 @@
 <script setup>
   import ButtonGeneric from "@/components/ButtonGeneric.vue"
-import { reactive, computed, toRefs } from "vue";
+  import { computed } from "vue";
   const emit = defineEmits(['onClickButtonBanner'])
   const props = defineProps({
       title: String, 

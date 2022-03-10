@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 35" width="26" height="35">
+	<title>Fontes</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m-824-1276h1366v1590h-1366z" />
+		</clipPath>
+		<image width="384" height="512" id="img1" href="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJ0cmVlIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtdHJlZSBmYS13LTEyIiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDM4NCA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTM3Ny4zMyAzNzUuNDI5TDI5My45MDYgMjg4SDMyOGMyMS4wMTcgMCAzMS44NzItMjUuMjA3IDE3LjQ0OC00MC40NzlMMjYyLjc5IDE2MEgyOTZjMjAuODc4IDAgMzEuODUxLTI0Ljk2OSAxNy41ODctNDAuMzMxbC0xMDQtMTEyLjAwM2MtOS40ODUtMTAuMjE0LTI1LjY3Ni0xMC4yMjktMzUuMTc0IDBsLTEwNCAxMTIuMDAzQzU2LjIwNiAxMzQuOTY5IDY3LjAzNyAxNjAgODggMTYwaDMzLjIxbC04Mi42NTkgODcuNTIxQzI0LjEyMSAyNjIuODAxIDM0Ljk5MyAyODggNTYgMjg4aDM0LjA5NEw2LjY2NSAzNzUuNDI5Qy03Ljg2OSAzOTAuNjU1IDIuOTI1IDQxNiAyNC4wMjUgNDE2SDE0NGMwIDMyLjc4MS0xMS4xODggNDkuMjYtMzMuOTk1IDY3LjUwNkM5OC4yMjUgNDkyLjkzIDEwNC45MTQgNTEyIDEyMCA1MTJoMTQ0YzE1LjA4NiAwIDIxLjc3Ni0xOS4wNjkgOS45OTUtMjguNDk0LTE5Ljc2OC0xNS44MTQtMzMuOTkyLTMxLjY2NS0zMy45OTUtNjcuNDk2VjQxNmgxMTkuOTdjMjEuMDUgMCAzMS45MjktMjUuMzA5IDE3LjM2LTQwLjU3MXoiPjwvcGF0aD48L3N2Zz4="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Fontes" clip-path="url(#cp1)">
+		<use id="tree-solid" href="#img1" transform="matrix(.068,0,0,.068,0,0)"/>
+	</g>
+</svg>

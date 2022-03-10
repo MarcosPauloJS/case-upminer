@@ -1,7 +1,21 @@
 <script setup>
   import BannerSpotlight from "@/components/BannerSpotlight.vue";
+  import SelectCard from "@/components/SelectCard.vue";
   import 'vue3-carousel/dist/carousel.css';
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
+  const cardsSelect = [
+    {name: 'Todos', icon: 'globe2', id: 0},
+    {name: 'Profissional', icon: 'briefcase', id: 1},
+    {name: 'Reguladores', icon: 'university', id: 2},
+    {name: 'Sócio Ambiental', icon: 'tree', id: 3},
+    {name: 'Jurídico', icon: 'gavel', id: 4},
+    {name: 'Listas Restritivas', icon: 'ban', id: 4},
+    {name: 'Mídia / Internet', icon: 'globe', id: 4},
+    {name: 'Bens e Imóveis', icon: 'gem', id: 4},
+    {name: 'Cadastro', icon: 'male', id: 4},
+    {name: 'Financeiro', icon: 'piggy', id: 4},
+  ]
 </script>
 
 <template>
@@ -31,9 +45,15 @@
         <Pagination />
       </template>
   </carousel>
+
+  <div class="selectTag">
+    <SelectCard  v-for="card in cardsSelect" :key="card.id" :title="card.name" :iconName="card.icon" :id="card.id"/>
+  </div>
 </template>
 
 <style lang="scss">
+  @import "@/assets/scss/variables.scss";
+
   :root {
     --vc-nav-background-color: #f16f13;
     --vc-clr-primary: #f16f13;
@@ -51,5 +71,20 @@
 
   .carousel__next,.carousel__next--in-active {
     transform: translate(-50%, -50%);
+  }
+
+  .selectTag {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    padding: 30px;
+
+    @include small {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+
+    @include medium {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 </style>

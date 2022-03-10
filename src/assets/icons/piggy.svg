@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 33" width="37" height="33">
+	<title>Fontes</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m-480-1278h1366v1590h-1366z" />
+		</clipPath>
+		<image width="576" height="512" id="img1" href="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJwaWdneS1iYW5rIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtcGlnZ3ktYmFuayBmYS13LTE4IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDU3NiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTU2MCAyMjRoLTI5LjVjLTguOC0yMC0yMS42LTM3LjctMzcuNC01Mi41TDUxMiA5NmgtMzJjLTI5LjQgMC01NS40IDEzLjUtNzMgMzQuMy03LjYtMS4xLTE1LjEtMi4zLTIzLTIuM0gyNTZjLTc3LjQgMC0xNDEuOSA1NS0xNTYuOCAxMjhINTZjLTE0LjggMC0yNi41LTEzLjUtMjMuNS0yOC44QzM0LjcgMjE1LjggNDUuNCAyMDggNTcgMjA4aDFjMy4zIDAgNi0yLjcgNi02di0yMGMwLTMuMy0yLjctNi02LTYtMjguNSAwLTUzLjkgMjAuNC01Ny41IDQ4LjZDLTMuOSAyNTguOCAyMi43IDI4OCA1NiAyODhoNDBjMCA1Mi4yIDI1LjQgOTguMSA2NCAxMjcuM1Y0OTZjMCA4LjggNy4yIDE2IDE2IDE2aDY0YzguOCAwIDE2LTcuMiAxNi0xNnYtNDhoMTI4djQ4YzAgOC44IDcuMiAxNiAxNiAxNmg2NGM4LjggMCAxNi03LjIgMTYtMTZ2LTgwLjdjMTEuOC04LjkgMjIuMy0xOS40IDMxLjMtMzEuM0g1NjBjOC44IDAgMTYtNy4yIDE2LTE2VjI0MGMwLTguOC03LjItMTYtMTYtMTZ6bS0xMjggNjRjLTguOCAwLTE2LTcuMi0xNi0xNnM3LjItMTYgMTYtMTYgMTYgNy4yIDE2IDE2LTcuMiAxNi0xNiAxNnpNMjU2IDk2aDEyOGM1LjQgMCAxMC43LjQgMTUuOS44IDAtLjMuMS0uNS4xLS44IDAtNTMtNDMtOTYtOTYtOTZzLTk2IDQzLTk2IDk2YzAgMi4xLjUgNC4xLjYgNi4yIDE1LjItMy45IDMxLTYuMiA0Ny40LTYuMnoiPjwvcGF0aD48L3N2Zz4="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Fontes" clip-path="url(#cp1)">
+		<use id="piggy-bank-solid" href="#img1" transform="matrix(.064,0,0,.064,0,0)"/>
+	</g>
+</svg>

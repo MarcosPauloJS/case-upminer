@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35">
+	<title>Fontes</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m-1165-1276h1366v1590h-1366z" />
+		</clipPath>
+		<image width="512" height="512" id="img1" href="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJnYXZlbCIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLWdhdmVsIGZhLXctMTYiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNNTA0Ljk3MSAxOTkuMzYybC0yMi42MjctMjIuNjI3Yy05LjM3My05LjM3My0yNC41NjktOS4zNzMtMzMuOTQxIDBsLTUuNjU3IDUuNjU3TDMyOS42MDggNjkuMjU1bDUuNjU3LTUuNjU3YzkuMzczLTkuMzczIDkuMzczLTI0LjU2OSAwLTMzLjk0MUwzMTIuNjM4IDcuMDI5Yy05LjM3My05LjM3My0yNC41NjktOS4zNzMtMzMuOTQxIDBMMTU0LjI0NiAxMzEuNDhjLTkuMzczIDkuMzczLTkuMzczIDI0LjU2OSAwIDMzLjk0MWwyMi42MjcgMjIuNjI3YzkuMzczIDkuMzczIDI0LjU2OSA5LjM3MyAzMy45NDEgMGw1LjY1Ny01LjY1NyAzOS41OTggMzkuNTk4LTgxLjA0IDgxLjA0LTUuNjU3LTUuNjU3Yy0xMi40OTctMTIuNDk3LTMyLjc1OC0xMi40OTctNDUuMjU1IDBMOS4zNzMgNDEyLjExOGMtMTIuNDk3IDEyLjQ5Ny0xMi40OTcgMzIuNzU4IDAgNDUuMjU1bDQ1LjI1NSA0NS4yNTVjMTIuNDk3IDEyLjQ5NyAzMi43NTggMTIuNDk3IDQ1LjI1NSAwbDExNC43NDUtMTE0Ljc0NWMxMi40OTctMTIuNDk3IDEyLjQ5Ny0zMi43NTggMC00NS4yNTVsLTUuNjU3LTUuNjU3IDgxLjA0LTgxLjA0IDM5LjU5OCAzOS41OTgtNS42NTcgNS42NTdjLTkuMzczIDkuMzczLTkuMzczIDI0LjU2OSAwIDMzLjk0MWwyMi42MjcgMjIuNjI3YzkuMzczIDkuMzczIDI0LjU2OSA5LjM3MyAzMy45NDEgMGwxMjQuNDUxLTEyNC40NTFjOS4zNzItOS4zNzIgOS4zNzItMjQuNTY4IDAtMzMuOTQxeiI+PC9wYXRoPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Fontes" clip-path="url(#cp1)">
+		<use id="gavel-solid" href="#img1" transform="matrix(.068,0,0,.068,0,0)"/>
+	</g>
+</svg>
