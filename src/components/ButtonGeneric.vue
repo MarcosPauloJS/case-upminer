@@ -34,6 +34,7 @@
   @import "@/assets/scss/variables.scss";
 
   .button {
+    width: v-bind(width);
     font-size: v-bind(fontSize);
     padding: v-bind(padding);
     text-align: v-bind(textAlign);
