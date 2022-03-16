@@ -1,5 +1,4 @@
 <script setup>
-  import InlineSvg from 'vue-inline-svg';
   import ButtonGeneric from "@/components/ButtonGeneric.vue"
   import { computed } from "vue";
 

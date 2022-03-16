@@ -1,10 +1,11 @@
 <script setup>
   import 'vue3-carousel/dist/carousel.css';
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-  import BannerSpotlight from "@/components/BannerSpotlight.vue";
-  import SelectCard from "@/components/SelectCard.vue";
-  import CardService from "@/components/CardService.vue";
-
+  import BannerSpotlight from '@/components/BannerSpotlight.vue';
+  import SelectCard from '@/components/SelectCard.vue';
+  import CardService from '@/components/CardService.vue';
+  import api from '@/utils/api.js'
+  console.log(api.get('/list'))
   const cardsSelect = [
     {name: 'Todos', iconUrl: 'https://firebasestorage.googleapis.com/v0/b/upminer-1e499.appspot.com/o/globe-v2.svg?alt=media&token=fe59e5eb-f8d7-4ad5-bea4-d644539692f4', id: 0, resume: 'O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte.', price: 40},
     {name: 'Profissional', iconUrl: 'https://firebasestorage.googleapis.com/v0/b/upminer-1e499.appspot.com/o/briefcase.svg?alt=media&token=c2ea7b0f-e374-47c1-9c00-535de4ff30f5', id: 1, resume: 'O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte.', price: 40},

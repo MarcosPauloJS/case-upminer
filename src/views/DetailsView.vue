@@ -5,7 +5,6 @@
   import 'vue3-carousel/dist/carousel.css';
   import BannerSpotlight from "@/components/BannerSpotlight.vue";
   import ButtonGeneric from "@/components/ButtonGeneric.vue";
-  import InlineSvg from 'vue-inline-svg';
   import ArrowLeft from '@/assets/icons/arrow-left.svg'
 
   const details = {
