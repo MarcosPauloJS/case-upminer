@@ -5,7 +5,13 @@
   import SelectCard from '@/components/SelectCard.vue';
   import CardService from '@/components/CardService.vue';
   import api from '@/utils/api.js'
-  console.log(api.get('/list'))
+  
+  api.get('/list')
+  .then( response => {
+    console.log(response.data.data)
+  }
+  );
+  
   const cardsSelect = [
     {name: 'Todos', iconUrl: 'https://firebasestorage.googleapis.com/v0/b/upminer-1e499.appspot.com/o/globe-v2.svg?alt=media&token=fe59e5eb-f8d7-4ad5-bea4-d644539692f4', id: 0, resume: 'O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte.', price: 40},
     {name: 'Profissional', iconUrl: 'https://firebasestorage.googleapis.com/v0/b/upminer-1e499.appspot.com/o/briefcase.svg?alt=media&token=c2ea7b0f-e374-47c1-9c00-535de4ff30f5', id: 1, resume: 'O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte.', price: 40},
@@ -52,18 +58,52 @@
     <SelectCard  v-for="card in cardsSelect" :key="card.id" :title="card.name" :iconUrl="card.iconUrl" :id="card.id"/>
   </div>
 
+  <div class="search">
+    <span class="search__label">ORDENAR</span>
+    <select class="search__select" v-model="selected">
+      <option disabled value="">selecione ...</option>
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+  </div>
+
   <div  class="cards-wrapper">
     <CardService v-for="card in cardsSelect" :key="card.id" :title="card.name" :resume="card.resume" :price="card.price" :iconUrl="card.iconUrl" :id="card.id"/>
   </div>
 </template>
 
 <style lang="scss">
+  @use "sass:map";
   @import "@/assets/scss/variables.scss";
 
   :root {
     --vc-nav-background-color: #f16f13;
     --vc-clr-primary: #f16f13;
     --vc-clr-secondary: #e5a77a;
+  }
+
+  .search {
+    display: flex;
+    padding: 0 30px;
+    margin-bottom: 10px;
+
+    @include small {
+      padding: 10px;
+      justify-content: center;
+    }
+
+    .search__label {
+      font-size: map.get($text-sizes, "medium");
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .search__select {
+      width: 200px;
+      border: 1px solid map.get($colors, "secondary");
+      border-radius: 5px;
+    }
   }
   
   .carousel__prev--in-active,
@@ -82,11 +122,12 @@
   .selectTag {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    padding: 30px;
+    padding: 0 30px;
+    margin-bottom: 40px;
 
     @include small {
       grid-template-columns: 1fr;
-      padding: 10px;
+      padding: 0 10px;
     }
 
     @include medium {
