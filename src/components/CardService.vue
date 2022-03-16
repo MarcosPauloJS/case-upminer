@@ -30,8 +30,8 @@
     </div>
     
     <div class="card-service__button" width="100%" borderRadius="0px" :text="buttonText" @onClickButton="handleClickButton" >
-        <span>{{valueFormated}}</span>
-        <span>Saiba Mais</span>
+      <span>{{valueFormated}}</span>
+      <span>Saiba Mais</span>
     </div>
   </div>
 </template>

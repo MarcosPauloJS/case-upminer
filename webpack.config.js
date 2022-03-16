@@ -15,9 +15,23 @@ module.exports = {
         options: {
           sourceMap: true,
         },
-
+      },
+      {
+        test: /\.svg$/,
+        loader: 'vue-svg-loader',
+      },
+      {
+        test: /\.vue$/,
+        use: [
+          {
+            loader: "vue-loader", 
+            options: vueLoaderConfig
+          },
+          {
+              loader: "vue-svg-inline-loader",
+          }
+        ]
       }
     ]
   },
-  // plugin omitted
 }
