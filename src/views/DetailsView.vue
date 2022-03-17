@@ -9,11 +9,12 @@
   import ArrowLeft from '@/assets/icons/arrow-left.svg'
   import api from '@/utils/api.js'
 
-  const route = useRoute();  
+  const route = useRoute();
+  const router = useRoute();
   const id = route.params.id;
   const data = ref({});
-  const imgs = ref([])
-
+  const imgs = ref([]);
+  const imgQtd = ref(5)
 
   const settings = {
     itemsToShow: 2,
@@ -38,9 +39,10 @@
 
   onMounted(() => {
     api.get(`/service?id=${id}`)
-      .then( response => {
+      .then( async response => {
        data.value = response.data.data[0]
-       imgs.value = response.data.data[0].imgs.split(';')
+       imgs.value = await response.data.data[0].imgs.split(';')
+       imgQtd.value = await response.data.data[0].imgs.split(';').length
       });
   })
 </script>
@@ -72,25 +74,27 @@
         <Pagination />
       </template>
   </carousel>
+
   <man class="article">
-    <router-link class="article__back-button" :to="{ path: '/' }">
+    <a class="article__back-button" href="/">
       <img class="article__back-button__img" :src="ArrowLeft" />
       {{data.name}}
-    </router-link>
-
-    <carousel class="article__gallery" :settings="settings">
-        <slide v-for="(imgUrl, index) in imgs" :key="index">
-          <div class="carousel__item article__gallery__carousel">
-            <img class="article__gallery__carousel__img" :src="imgUrl" />
-          </div>
-        </slide>
-
-        <template #addons>
-          <Navigation />
-          <Pagination />
-        </template>
-    </carousel>
+    </a>
     
+    <carousel class="article__gallery" :settings="settings">    
+      <slide v-for="index in imgQtd" :key="`image-${index}`">
+        <div class="carousel__item article__gallery__carousel">
+          <img class="article__gallery__carousel__img" :src="imgs[index - 1]" />
+        </div>
+      </slide>
+      
+      <template #addons>
+        <Navigation />
+        <Pagination />
+      </template>
+    </carousel>
+ 
+
     <section class="article__content" v-html="data.content">
     </section>
 
@@ -206,5 +210,11 @@
         margin-right: 20px;
       }
     }
+  }
+
+  .VueCarousel-slide {
+    visibility: visible;
+    flex-basis: 100%;
+    width: 100%;
   }
 </style>
