@@ -25,6 +25,7 @@ dentro do INPUT SELECT (4).
 - vue-router (modulo do vue que foi utilizado para navegação)
 - vue3-carousel (esta lib foi utilizada para o carrossel com algumas modificações no scss)
 - axios (todas as requisições a api foram feitas por meio do axios)
+- heroku (usado no deploy)
 
 ## Tecnologias back end utilizadas:
  - serverless framework (utilizado para facilitar a criação da api)
@@ -32,6 +33,9 @@ dentro do INPUT SELECT (4).
  - nodejs
  - mySql
  - banco de dados  mySQL no rds da aws
+
+## Como acessar o projeto
+e possivel acessar o projeto pela url [https://up-miner.herokuapp.com/](https://up-miner.herokuapp.com/)
 
 ## Como rodar o projeto
 1. baixe o zip do [repositório](https://github.com/MarcosPauloJS/case-upminer) ou faça o clone do repositório ```git clone https://github.com/MarcosPauloJS/case-upminer.git```
