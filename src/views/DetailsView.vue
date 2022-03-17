@@ -1,27 +1,19 @@
 <script setup>
   import 'vue3-carousel/dist/carousel.css';
+  import { useRouter, useRoute } from 'vue-router'
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-  import { computed } from "vue";
+  import { computed, onMounted, ref } from "vue";
   import 'vue3-carousel/dist/carousel.css';
   import BannerSpotlight from "@/components/BannerSpotlight.vue";
   import ButtonGeneric from "@/components/ButtonGeneric.vue";
   import ArrowLeft from '@/assets/icons/arrow-left.svg'
+  import api from '@/utils/api.js'
 
-  const details = {
-    name: 'Profissional', 
-    iconUrl: 'https://firebasestorage.googleapis.com/v0/b/upminer-1e499.appspot.com/o/globe-v2.svg?alt=media&token=fe59e5eb-f8d7-4ad5-bea4-d644539692f4', 
-    id: 0,
-    content: '<p>O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma empresa desde o seu ano de fundação. Tenha acesso aos principais eventos corporativos de uma empresa, como: marcos jurídicos, mudança no quadro societário, aumento de capital,reportagens e muito mais.</p> <p>Após realizar a consulta, o histórico é salvo automaticamente, tornando as informações acessíveis ao usuário. A linha do tempo pode também ser exportada no formato PDF</p>',
-    resume: 'O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte.', 
-    price: 40,
-    imgs: [
-      'https://cdn.pixabay.com/photo/2016/05/21/04/37/pudding-1406386_960_720.jpg',
-      'https://cdn.pixabay.com/photo/2016/05/21/04/37/pudding-1406386_960_720.jpg',
-      'https://cdn.pixabay.com/photo/2016/05/21/04/37/pudding-1406386_960_720.jpg',
-      'https://cdn.pixabay.com/photo/2016/05/21/04/37/pudding-1406386_960_720.jpg',
-      'https://cdn.pixabay.com/photo/2016/05/21/04/37/pudding-1406386_960_720.jpg',
-    ]
-  }
+  const route = useRoute();  
+  const id = route.params.id;
+  const data = ref({});
+  const imgs = ref([])
+
 
   const settings = {
     itemsToShow: 2,
@@ -40,9 +32,18 @@
   }
 
   const valueFormated = computed( () => {
-    const originalPrice = details.price ? details.price : 0
+    const originalPrice = data?.value?.price ? data.value.price : 0
     return  originalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
   });
+
+  onMounted(() => {
+    api.get(`/service?id=${id}`)
+      .then( response => {
+       data.value = response.data.data[0]
+       console.log(response.data.data[0].imgs.split(';'))
+       imgs.value = response.data.data[0].imgs.split(';')
+      });
+  })
 </script>
 
 <template>
@@ -72,15 +73,14 @@
         <Pagination />
       </template>
   </carousel>
-  
   <man class="article">
     <router-link class="article__back-button" :to="{ path: '/' }">
       <img class="article__back-button__img" :src="ArrowLeft" />
-      {{details.name}}
+      {{data.name}}
     </router-link>
 
     <carousel class="article__gallery" :settings="settings">
-        <slide v-for="(imgUrl, index) in details.imgs" :key="index">
+        <slide v-for="(imgUrl, index) in imgs" :key="index">
           <div class="carousel__item article__gallery__carousel">
             <img class="article__gallery__carousel__img" :src="imgUrl" />
           </div>
@@ -92,7 +92,7 @@
         </template>
     </carousel>
     
-    <section class="article__content" v-html="details.content">
+    <section class="article__content" v-html="data.content">
     </section>
 
     <div class="article__footer">

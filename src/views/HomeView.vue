@@ -8,12 +8,11 @@
   import CardService from '@/components/CardService.vue';
   import api from '@/utils/api.js'
   
+  const router = useRouter()
   const data = reactive({services: [], tags: []})
   const AllCards = { name: 'Todos', iconUrl: 'https://firebasestorage.googleapis.com/v0/b/upminer-1e499.appspot.com/o/globe-v2.svg?alt=media&token=fe59e5eb-f8d7-4ad5-bea4-d644539692f4', id: 'todos'};
   const selectTag = ref('todos')
   let services = [];
-  const router = useRouter()
-  const route = useRoute()
 
   const onSelect = (id) => {
     if(id === 'todos'){
@@ -25,7 +24,7 @@
   }
 
   const clickCard = (id) => {
-    router.push(`/detalhes?id=${id}`)
+    router.push(`/detalhes/${id}`)
   }
 
 
