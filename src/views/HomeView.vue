@@ -15,6 +15,7 @@
   let services = [];
 
   const onSelect = (id) => {
+    selectTag.value = id
     if(id === 'todos'){
       data.services = services
       return
@@ -67,12 +68,12 @@
   </carousel>
 
   <div class="selectTag">
-    <SelectCard v-for="card in [AllCards, ...data.tags]" :key="card.id" :title="card.name" :iconUrl="card.iconUrl" :id="card.id" @click="onSelect(card.id)"/>
+    <SelectCard v-for="card in [AllCards, ...data.tags]" :key="card.id" :title="card.name" :iconUrl="card.iconUrl" :id="card.id" :select="selectTag" :active="selectTag === card.id" @click="onSelect(card.id)"/>
   </div>
 
   <div class="search">
     <span class="search__label">ORDENAR</span>
-    <select class="search__select" v-model="selectTag"  @change="onSelect(selectTag)">
+    <select class="search__select" v-model="selectTag" @change="onSelect(selectTag)">
       <option v-for="tag in [AllCards, ...data.tags]" :value="tag.id" :key="tag.id">{{tag.name}}</option>
     </select>
   </div>

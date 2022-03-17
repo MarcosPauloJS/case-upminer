@@ -1,15 +1,23 @@
 <script setup>
+  import { onUpdated, ref } from 'vue';
   const props = defineProps({
     title: String,
     iconUrl: String,
+    active: Boolean
   })
   
   const title = props.title;
   const iconUrl = props.iconUrl;
+  const active = ref(props.active);
+
+  onUpdated( ()=>{
+    active.value = props.active
+  })
+
 </script>
 
 <template>
-  <div class="select-card">
+  <div class="select-card" :class="{'select-card--active' : active}">
     <img class="select-card__img" :src="iconUrl" />
     <h3 class="select-card__title">
       {{title}}
@@ -48,10 +56,6 @@
       margin: 3px;
     }
 
-    >.select-card--active {
-      background-color: map.get($colors, "primary");
-    }
-
     >.select-card__title {
       font-size: map.get($text-sizes, "smallest");
     }
@@ -60,6 +64,10 @@
       width: 32px ;
       height: 32px ;
     }
+  }
+
+  .select-card--active {
+    background-color: map.get($colors, "primary");
   }
 
 </style>
