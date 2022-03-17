@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 19" width="11" height="19">
+	<title>Objeto Inteligente de Vetor</title>
+	<defs>
+		<image  width="11" height="19" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAATCAMAAABx9wfiAAAAAXNSR0IB2cksfwAAAEVQTFRF/////vHp8ok9+9i//e/k8X4r72kJ8oMz/vPr/vXv/vbx/erc8Xwp8Xkj841E849I/vn18oU38G8U/vPs/vfx8og78oM0VqDLEAAAAEtJREFUeJxjYIACRiZmGJOFlY0JwWTnQIhyIphcECY3D4LJy8aHYPILYDAZBNmEhGGWIItjckSQODDzgRxWJA4LGkeUA4v7gRwxZgBDgwL8OduHFAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
