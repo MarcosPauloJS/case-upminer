@@ -40,7 +40,6 @@
     api.get(`/service?id=${id}`)
       .then( response => {
        data.value = response.data.data[0]
-       console.log(response.data.data[0].imgs.split(';'))
        imgs.value = response.data.data[0].imgs.split(';')
       });
   })
