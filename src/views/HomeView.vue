@@ -12,16 +12,60 @@
   const data = reactive({services: [], tags: []})
   const AllCards = { name: 'Todos', iconUrl: 'https://firebasestorage.googleapis.com/v0/b/upminer-1e499.appspot.com/o/globe-v2.svg?alt=media&token=fe59e5eb-f8d7-4ad5-bea4-d644539692f4', id: 'todos'};
   const selectTag = ref('todos')
+  const selectSearch = ref('')
   let services = [];
 
-  const onSelect = (id) => {
+  const onSelect = (id, executeSearch = true) => {
     selectTag.value = id
     if(id === 'todos'){
-      data.services = services
-      return
+      const dataForFiltering = executeSearch ? onSearch(selectSearch.value, false) : services
+      data.services = dataForFiltering
+      return dataForFiltering
+    }
+    
+    const dataForFiltering = executeSearch ? onSearch(selectSearch.value, false) : services
+    const dataFiltered = dataForFiltering.filter( service => service.id === id)
+    data.services = dataFiltered
+
+    return dataFiltered
+  }
+
+  const onSearch = (id, executeSearch = true) => {
+    selectSearch.value = id
+    if(id === ''){
+      const dataForFiltering = executeSearch ? onSelect(selectTag.value, false) : services
+      data.services = dataForFiltering
+      return dataForFiltering
+    }
+    
+    const filters = {
+      LowestPrice: data => {
+        return data.sort(function(a, b) {
+          return a.price - b.price;
+        });
+      },
+      biggestPrice: data => {
+        return data.sort(function(a, b) {
+          return b.price - a.price;
+        });
+      },
+      recentlyReleased: data => {
+        return data.sort(function(a, b) {
+           return new Date(b.createAt) - new Date(a.createAt);
+        });
+      },
+      lessRecent: data => {
+        return data.sort(function(a, b) {
+           return new Date(a.createAt) - new Date(b.createAt);
+        });
+      },
     }
 
-    data.services = services.filter( service => service.id === id)
+    const dataForFiltering = executeSearch ? onSelect(selectTag.value, false) : services
+    const dataFiltered = filters[id](dataForFiltering)
+    data.services = dataFiltered
+
+    return dataFiltered
   }
 
   const clickCard = (id) => {
@@ -73,8 +117,12 @@
 
   <div class="search">
     <span class="search__label">ORDENAR</span>
-    <select class="search__select" v-model="selectTag" @change="onSelect(selectTag)">
-      <option v-for="tag in [AllCards, ...data.tags]" :value="tag.id" :key="tag.id">{{tag.name}}</option>
+    <select class="search__select" v-model="selectSearch" @change="onSearch(selectSearch)">
+      <option value="">selecione ...</option>
+      <option value="LowestPrice" >Menor Preço</option>
+      <option value="biggestPrice" >Maior Preço</option>
+      <option value="recentlyReleased" >Lançamento</option>
+      <option value="lessRecent" >Antigos</option>
     </select>
   </div>
 
@@ -95,7 +143,7 @@
 
   .search {
     display: flex;
-    padding: 0 30px;
+    padding: 0 5%;
     margin-bottom: 10px;
 
     @include small {
@@ -132,7 +180,7 @@
   .selectTag {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    padding: 0 30px;
+    padding: 0 5%;
     margin-bottom: 40px;
 
     @include small {
