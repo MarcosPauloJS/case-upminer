@@ -34,7 +34,7 @@ dentro do INPUT SELECT (4).
  - mySql
  - banco de dados  mySQL no rds da aws
 
-## Como acessar o projeto
+## Como acessar o projeto (deixarei esse projeto em deploy por 30 dias apos a entrega do desafio)
 e possivel acessar o projeto pela url [https://up-miner.herokuapp.com/](https://up-miner.herokuapp.com/)
 
 ## Como rodar o projeto
@@ -52,4 +52,4 @@ gostei muito com ela e possível escrever códigos mais curtos e com uma estrutu
  No backend toda a parte de serveless era algo novo para mim então o mais trabalhoso foi fazer as configurações da aws o código em si da api foi bem simples
  
 ## Conclusões
- Foi um projeto bem legal nessa semana aprendi muito não apenas tecnicamente, mas pessoalmente também conseguir entender bem os meus limites e o tempo que levo para realizar as tarefas de escopo muito amplo e lidar planejamento macro, tive problemas com o prazo por que adicionei complexidade ao projeto  fiz no meu horário livre altas horas sem dormir, sempre pensava vou fazer só mais essa funcionalidade e neste ponto entendo que saio com mais maturidade para mensurar melhor toda essa  
+ Foi um projeto bem legal nessa semana aprendi muito não apenas tecnicamente, mas pessoalmente também conseguir entender bem os meus limites e o tempo que levo para realizar as tarefas de escopo muito amplo e lidar planejamento macro, tive problemas com o prazo por que adicionei complexidade ao projeto  fiz no meu horário livre altas horas sem dormir, sempre pensava vou fazer só mais essa funcionalidade e neste ponto entendo que saio com mais maturidade para mensurar melhor toda essa gestão e planejamento antes de ir para o código de fato.
