@@ -44,7 +44,6 @@
     flex-direction: column;
     align-items: center;
     width: 300px;
-    height: 100%;
     min-height: 100%;
     background-color: $background-color;
     box-shadow: 0px -2px 9px 0px rgba(0,0,0,0.4);
@@ -55,6 +54,10 @@
     overflow: hidden;
     padding: 30px 20px 80px 20px;
     margin: 0px 20px 50px 20px;
+
+    @include small {
+      min-height: 300px;
+    }
 
     &:hover {
       transition: 0.7s;
